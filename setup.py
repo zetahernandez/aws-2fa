@@ -1,5 +1,5 @@
 """
-Manage and update aws-cli 2fa creedentials
+Manage and update aws-cli 2fa credentials
 """
 from setuptools import find_packages, setup
 
@@ -16,7 +16,7 @@ setup(
     license='BSD',
     author='Zeta Hernandez',
     author_email='zetahernandez@gmail.com',
-    description='Manage and update aws-cli 2fa creedentials',
+    description='Manage and update aws-cli 2fa credentials',
     long_description=__doc__,
     packages=find_packages(exclude=['tests']),
     include_package_data=True,

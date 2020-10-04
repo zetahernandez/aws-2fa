@@ -95,20 +95,27 @@ class GetSessionToken:
 
 
 @click.command()
-@click.option('--profile', default='default', envvar='AWS_PROFILE', required=False)
+@click.option(
+    '-p',
+    '--profile',
+    default='default',
+    envvar='AWS_PROFILE',
+    required=False,
+    help='The profile to be updated with the 2fa credentials. Default: default'
+)
 @click.option(
     '--credential-path',
     type=click.Path(exists=True),
     required=False,
     default=os.path.expanduser('~/.aws/credentials'),
-    help='AWS credentils file path',
+    help='AWS credentials file path. Default: ~/.aws/credentials',
 )
-@click.option('-p', '--print-credentials', default=False, help='Print the generated creedentials')
+@click.option('--print-credentials', default=False, help='Print the generated credentials')
 @click.argument('token', required=True)
 @click.argument('serial_number', required=False)
 @click.argument('duration', required=False)
 def main(token, duration, credential_path, profile, serial_number, print_credentials):
-    """Manage and update aws-cli 2fa creedentials"""
+    """Manage and update aws-cli 2fa credentials"""
     aws_config = AWSConfig(profile=profile, credential_path=credential_path)
     client = get_client(
         aws_access_key_id=aws_config.aws_access_key_id,
