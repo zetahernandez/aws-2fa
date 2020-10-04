@@ -11,7 +11,7 @@ dependencies = [
 
 setup(
     name='aws-2fa',
-    version='0.0.1',
+    version='0.1.0',
     url='https://github.com/zetahernandez/aws-2fa',
     license='BSD',
     author='Zeta Hernandez',
