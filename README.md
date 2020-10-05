@@ -1,4 +1,4 @@
-# aws_2fa
+# aws-2fa
 
 Manage and update aws-cli 2fa credentials.
 
@@ -7,7 +7,7 @@ Manage and update aws-cli 2fa credentials.
 
 Simply run:
 
-    $ pip3 install aws_2fa
+    $ pip3 install aws-2fa
 
 
 # Usage
